@@ -2,26 +2,7 @@
 
 sudo apt install git build-essential cmake unzip -y # Install necessary dependencies for this script
 
-# Prompt device type
-function PromptDeviceType() {
-    echo "What device are you using? (rpi3, rpi4, rpi5, rk3399, rk3588, other)"
-    read device_type
-}
-device_type_satisfied=false
-
-until [ "$device_type_satisfied" = true ];
-do
-    PromptDeviceType
-
-    if [ "$device_type" = "rpi3" || "rpi44" || "rpi5" || "rk3399" || "rk3588" "other" ]
-    then
-        device_type_satisfied=true
-    fi
-done
-
-
-
-# Install box64
+# box64 installation function
 function Installbox64() {
     if [ "$device_type" = "rpi3" ]
     then
@@ -62,6 +43,23 @@ function Installbox64() {
     fi
 }
 
+# Device selection
+function PromptDeviceType() {
+    echo "What device are you using? (rpi3, rpi4, rpi5, rk3399, rk3588, other)"
+    read device_type
+}
+device_type_satisfied=false
+
+until [ "$device_type_satisfied" = true ];
+do
+    PromptDeviceType
+
+    if [[ "$device_type" = "rpi3" || "$device_type" = "rpi4" || "$device_type" = "rpi5" || "$device_type" = "rk3399" || "$device_type" = "rk3588"  ]]
+    then
+        device_type_satisfied=true
+        Installbox64
+    fi
+done
 
 
 # Server Type Prompt
