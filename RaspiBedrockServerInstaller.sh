@@ -1,6 +1,6 @@
 # Bedrock Server Installation Script for ARM64
 
-sudo apt install git build-essential cmake unzip -y # Install necessary dependencies for this script
+sudo apt install git build-essential unzip -y # Install necessary dependencies for this script
 
 # box64 installation function
 function Installbox64() {
