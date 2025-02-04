@@ -4,4 +4,4 @@ It supports any release/preview version of the server software.
 
 (Only supports ARM64 Debian-based distributions)
 
-NOT FINISHED
+NOT FINISHED - CURRENTLY BROKEN
