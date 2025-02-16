@@ -76,7 +76,7 @@ do
     if [ "$server_type" = "release" ];
     then 
         server_type_satisfied=true
-        echo "/e[36mSelected server type: '/e[32mrelease/e[36m'/e[0m"
+        echo -e "/e[36mSelected server type: '/e[32mrelease/e[36m'/e[0m"
         echo "What version do you want to install? (Enter 'latest' for latest available version) (https://aka.ms/MCChangelogs)"
         read version
         if [ "$version" = "latest" ];
@@ -99,7 +99,7 @@ do
     elif [ "$server_type" = "preview" ];
     then 
         server_type_satisfied=true
-        echo "/e[36mSelected server type: '/e[32mpreview/e[36m'/e[0m"
+        echo -e "/e[36mSelected server type: '/e[32mpreview/e[36m'/e[0m"
         echo "What version do you want to install? (Enter 'latest' for latest available version) (https://feedback.minecraft.net/hc/sections/360001185332)"
         read version
         if [ "$version" = "latest" ];
@@ -121,7 +121,7 @@ do
 
 
 else
-    echo "/e[31mError: Invalid server type/e[0m"
+    echo -e "/e[31mError: Invalid server type/e[0m"
 fi
 
 done
