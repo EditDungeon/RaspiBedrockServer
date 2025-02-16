@@ -6,37 +6,37 @@ sudo apt install git build-essential unzip -y # Install necessary dependencies f
 function Installbox64() {
     if [ "$device_type" = "rpi3" ]
     then
-        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/blob/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rpi3arm64_0.2.8%2B20240522.8545d05-1_arm64.deb"
+        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/raw/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rpi3arm64_0.2.8%2B20240522.8545d05-1_arm64.deb"
         sudo apt install "./box64.deb"
         rm "box64.deb"
 
     elif [ "$device_type" = "rpi4" ]
     then
-        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/blob/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rpi4arm64_0.2.8%2B20240522.8545d05-1_arm64.deb"
+        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/raw/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rpi4arm64_0.2.8%2B20240522.8545d05-1_arm64.deb"
         sudo apt install "./box64.deb"
         rm "box64.deb"
     
     elif [ "$device_type" = "rpi5" ]
     then
-        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/blob/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rpi5arm64ps16k_0.2.8%2B20240522.8545d05-1_arm64.deb"
+        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/raw/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rpi5arm64ps16k_0.2.8%2B20240522.8545d05-1_arm64.deb"
         sudo apt install "./box64.deb"
         rm "box64.deb"
 
     elif [ "$device_type" = "rk3399" ]
     then
-        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/blob/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rk3399_0.2.8%2B20240522.8545d05-1_arm64.deb"
+        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/raw/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rk3399_0.2.8%2B20240522.8545d05-1_arm64.deb"
         sudo apt install "./box64.deb"
         rm "box64.deb"
 
     elif [ "$device_type" = "rk3588" ]
     then
-        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/blob/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rk3588_0.2.8%2B20240522.8545d05-1_arm64.deb"
+        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/raw/29718ee854c648152d82eb622897b34391a97c2a/debian/box64-rk3588_0.2.8%2B20240522.8545d05-1_arm64.deb"
         sudo apt install "./box64.deb"
         rm "box64.deb"
 
     elif [ "$device_type" = "other" ]
     then
-        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/blob/29718ee854c648152d82eb622897b34391a97c2a/debian/box64_0.2.8%2B20240522.8545d05-1_arm64.deb"
+        curl -o "box64.deb" "https://github.com/ryanfortner/box64-debs/raw/29718ee854c648152d82eb622897b34391a97c2a/debian/box64_0.2.8%2B20240522.8545d05-1_arm64.deb"
         sudo apt install "./box64.deb"
         rm "box64.deb"
     
