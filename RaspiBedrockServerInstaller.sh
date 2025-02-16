@@ -107,13 +107,13 @@ do
             LatestPreviewVersion=`curl -s https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json | jq -r '.linux.preview'`
 
             echo "Downloading latest release version..."
-            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-$LatestPreviewVersion.zip"
+            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux-preview/bedrock-server-$LatestPreviewVersion.zip"
 
             else
             # Downloading specified version
 
             echo "Downloading specified version: '$version'"
-            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-$version.zip"
+            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux-preview/bedrock-server-$version.zip"
         fi
 
 
