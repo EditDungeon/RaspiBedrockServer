@@ -124,5 +124,5 @@ fi
 done
 
 # Extract server files, then delete ZIP file
-#unzip "BedrockServer.zip" 
-#rm "BedrockServer.zip"
+unzip "BedrockServer.zip" 
+rm "BedrockServer.zip"
