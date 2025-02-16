@@ -81,12 +81,11 @@ do
         read version
         if [ "$version" = "latest" ];
         then
-            # Downloading latest version
+            # Downloading latest release version
+            LatestReleaseVersion=`curl -s https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json | jq -r '.linux.stable'`
 
-            DownloadURL=$(grep -o 'https://www.minecraft.net/bedrockdedicatedserver/bin-linux/[^"]*' downloads/version.html)
-            DownloadFile=$(echo "$DownloadURL" | sed 's#.*/##')
-            echo "Downloading latest version..."
-            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "$DownloadURL"
+            echo "Downloading latest release version..."
+            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-$LatestReleaseVersion.zip"
 
         else
             # Downloading specified version
@@ -104,13 +103,11 @@ do
         read version
         if [ "$version" = "latest" ];
         then
-            # Downloading latest version
-            # Code taken from: https://github.com/TheRemote/MinecraftBedrockServer/blob/master/SetupMinecraft.sh
+            # Downloading latest preview version
+            LatestPreviewVersion=`curl -s https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json | jq -r '.linux.preview'`
 
-            DownloadURL=$(grep -o 'https://www.minecraft.net/bedrockdedicatedserver/bin-linux/[^"]*' downloads/version.html)
-            DownloadFile=$(echo "$DownloadURL" | sed 's#.*/##')
-            echo "Downloading latest version..."
-            curl -H "Accept-Encoding: identity" -H "Accept-Language: en" -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.33 (KHTML, like Gecko) Chrome/90.0.$RandNum.212 Safari/537.33" -o "BedrockServer.zip" "$DownloadURL"
+            echo "Downloading latest release version..."
+            curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-$LatestPreviewVersion.zip"
 
             else
             # Downloading specified version
@@ -127,5 +124,5 @@ fi
 done
 
 # Extract server files, then delete ZIP file
-unzip "BedrockServer.zip" 
-rm "BedrockServer.zip"
+#unzip "BedrockServer.zip" 
+#rm "BedrockServer.zip"
