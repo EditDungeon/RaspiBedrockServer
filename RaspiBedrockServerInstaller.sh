@@ -77,7 +77,7 @@ do
     then 
         server_type_satisfied=true
         echo -e "/e[36mSelected server type: '/e[32mrelease/e[36m'/e[0m"
-        echo "What version do you want to install? (Enter 'latest' for latest available version) (https://aka.ms/MCChangelogs)"
+        echo "What version do you want to install? (Enter 'latest' for latest available version) (https://github.com/Bedrock-OSS/BDS-Versions/blob/main/versions.json)"
         read version
         if [ "$version" = "latest" ];
         then
@@ -99,7 +99,7 @@ do
     then 
         server_type_satisfied=true
         echo -e "/e[36mSelected server type: '/e[32mpreview/e[36m'/e[0m"
-        echo "What version do you want to install? (Enter 'latest' for latest available version) (https://feedback.minecraft.net/hc/sections/360001185332)"
+        echo "What version do you want to install? (Enter 'latest' for latest available version) (https://github.com/Bedrock-OSS/BDS-Versions/blob/main/versions.json)"
         read version
         if [ "$version" = "latest" ];
         then
