@@ -88,12 +88,14 @@ do
 
             echo "Downloading latest release version..."
             curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-$LatestReleaseVersion.zip"
+            InstalledVersion=$LatestReleaseVersion
 
         else
             # Downloading specified version
 
             echo "Downloading specified version: '$version'"
             curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-$version.zip"
+            InstalledVersion=$version
         fi
 
 
@@ -110,12 +112,14 @@ do
 
             echo "Downloading latest release version..."
             curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux-preview/bedrock-server-$LatestPreviewVersion.zip"
+            InstalledVersion=$LatestPreviewVersion
 
             else
             # Downloading specified version
 
             echo "Downloading specified version: '$version'"
             curl -A "Mozilla/5.0" -o "BedrockServer.zip" "https://www.minecraft.net/bedrockdedicatedserver/bin-linux-preview/bedrock-server-$version.zip"
+            InstalledVersion=$version
         fi
 
 
@@ -130,6 +134,8 @@ echo "Finishing installation..."
 sudo mkdir /minecraft # Make server directory
 unzip -d /minecraft BedrockServer.zip # Extract server files
 rm "BedrockServer.zip" # Delete ZIP file
+echo $server_type > /minecraft/server_type
+echo $InstalledVersion > /minecraft/version
 
 sudo useradd minecraft # Make new user for running the server
 sudo chown -R minecraft /minecraft # Give server user ownership of server directory
