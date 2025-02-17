@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Downloading server scripts..."
 curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/start.sh
 curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/stop.sh

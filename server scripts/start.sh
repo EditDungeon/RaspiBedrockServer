@@ -1,3 +1,5 @@
+#!/bin/bash
+
 bash scripts/update-server.sh
 bash scripts/update-scripts.sh
 
