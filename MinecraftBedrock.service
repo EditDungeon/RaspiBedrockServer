@@ -7,7 +7,7 @@ After=network-online.target
 User=minecraft
 WorkingDirectory=/minecraft
 
-ExecStart=bash scripts/start.sh
+ExecStart=screen BedrockServer bash scripts/start.sh
 
 Restart=always
 RestartSec=30
