@@ -47,7 +47,7 @@ function Installbox64() {
 
 # Device selection
 function PromptDeviceType() {
-    echo "What device are you using? (rpi3, rpi4, rpi5, rk3399, rk3588, other)"
+    echo -n "What device are you using? (rpi3, rpi4, rpi5, rk3399, rk3588, other)"
     read device_type
 }
 device_type_satisfied=false
@@ -66,7 +66,7 @@ done
 
 # Server Type Prompt
 function PromptServerType() {
-echo "What server type do you want to install? (release, preview)"
+echo -n "What server type do you want to install? (release, preview)"
 read server_type
 }
 server_type_satisfied=false
