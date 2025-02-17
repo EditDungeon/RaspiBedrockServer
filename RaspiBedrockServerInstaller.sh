@@ -1,4 +1,6 @@
-# Bedrock Server Installation Script for ARM64
+#!/bin/bash
+
+## Bedrock Server Installation Script for ARM64
 
 sudo apt install curl jq unzip -y # Install necessary dependencies for this script
 
@@ -123,6 +125,15 @@ fi
 
 done
 
-# Extract server files, then delete ZIP file
-unzip "BedrockServer.zip" 
-rm "BedrockServer.zip"
+
+sudo mkdir /minecraft # Make server directory
+unzip -d /minecraft BedrockServer.zip # Extract server files
+rm "BedrockServer.zip" # Delete ZIP file
+
+sudo useradd minecraft # Make new user for running the server
+sudo chown -R minecraft /minecraft # Give server user ownership of server directory
+
+mkdir /minecraft/scripts # Make server scripts directory
+
+
+
