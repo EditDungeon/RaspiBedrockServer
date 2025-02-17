@@ -5,9 +5,9 @@ After=network-online.target
 
 [Service]
 User=minecraft
-WorkingDirectory=/minecraft/scripts
+WorkingDirectory=/minecraft
 
-ExecStart=./start.sh
+ExecStart=bash scripts/start.sh
 
 Restart=always
 RestartSec=30
