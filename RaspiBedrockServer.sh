@@ -125,6 +125,7 @@ fi
 
 done
 
+echo "Finishing installation..."
 
 sudo mkdir /minecraft # Make server directory
 unzip -d /minecraft BedrockServer.zip # Extract server files
@@ -133,7 +134,16 @@ rm "BedrockServer.zip" # Delete ZIP file
 sudo useradd minecraft # Make new user for running the server
 sudo chown -R minecraft /minecraft # Give server user ownership of server directory
 
-mkdir /minecraft/scripts # Make server scripts directory
+mkdir /minecraft/scripts # Make server scripts folder
+cd /minecraft/scripts # Open scripts folder
 
+# Download server scripts
+echo "Downloading server scripts..."
+curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/start.sh
+curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/stop.sh
+curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/restart.sh
+curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/update-server.sh
+curl https://github.com/EditDungeon/RaspiBedrockServer/raw/refs/heads/main/server%20scripts/update-scripts.sh
+echo "Finished downloading scripts."
 
 
