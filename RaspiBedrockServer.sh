@@ -56,7 +56,7 @@ until [ "$device_type_satisfied" = true ];
 do
     PromptDeviceType
 
-    if [[ "$device_type" = "rpi3" || "$device_type" = "rpi4" || "$device_type" = "rpi5" || "$device_type" = "rk3399" || "$device_type" = "rk3588"  ]]
+    if [[ "$device_type" = "rpi3" || "$device_type" = "rpi4" || "$device_type" = "rpi5" || "$device_type" = "rk3399" || "$device_type" = "rk3588" || "$device_type" = "other"  ]]
     then
         device_type_satisfied=true
         Installbox64
