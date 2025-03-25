@@ -2,7 +2,8 @@
 
 ## Bedrock Server Installation Script for ARM64
 
-sudo apt install curl jq unzip screen systemd -y # Install necessary dependencies
+
+sudo apt install curl jq unzip screen systemd -y # Install required dependencies
 
 # box64 installation function
 function Installbox64() {
@@ -167,18 +168,18 @@ fi
 
 # Register alias commands
 
-alias "BedrockServer start"=sudo systemctl start MinecraftBedrock.service
-alias "BedrockServer stop"=sudo systemctl stop MinecraftBedrock.service
-alias "BedrockServer restart"=sudo systemctl restart MinecraftBedrock.service
-alias "BedrockServer console"=screen -r MinecraftBedrock
+alias "start-bedrock"=sudo systemctl start MinecraftBedrock.service
+alias "stop-bedrock"=sudo systemctl stop MinecraftBedrock.service
+alias "restart-bedrock"=sudo systemctl restart MinecraftBedrock.service
+alias "console-bedrock"=screen -r MinecraftBedrock
 
 # Installation finished
  
 echo "Finished installation"
-echo "Use 'BedrockServer start' to start the server"
-echo "Use 'BedrockServer stop' to stop the server"
-echo "Use 'BedrockServer restart' to restart the server"
-echo "Use 'BedrockServer console' to view the server console"
+echo "Use 'start-bedrock' to start the server"
+echo "Use 'stop-bedrock' to stop the server"
+echo "Use 'restart-bedrock' to restart the server"
+echo "Use 'console-bedrock' to view the server console"
 
 
 
