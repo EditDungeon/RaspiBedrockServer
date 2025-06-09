@@ -55,7 +55,7 @@ device_type_satisfied=false
 
 until [ "$device_type_satisfied" = true ];
 do
-    PromptDeviceType &
+    PromptDeviceType
     PromptDeviceType_pid=$!
     wait $PromptDeviceType_pid
 
@@ -78,7 +78,7 @@ do
 
     PromptServerType &
     PromptServerType_pid=$!
-    wait $PromotServerType_pid
+    wait $PromptServerType_pid
 
     if [ "$server_type" = "release" ];
     then 
