@@ -5,6 +5,6 @@ It supports any release/preview version of the server software.
 (Only supports ARM64 Debian-based distributions)
 
 ## How to Install
-Run this command: ``` curl https://raw.githubusercontent.com/EditDungeon/RaspiBedrockServer/refs/heads/main/RaspiBedrockServer.sh | bash  ```
+Run this command: ``` bash -c "$(curl -fsSL https://raw.githubusercontent.com/EditDungeon/RaspiBedrockServer/main/RaspiBedrockServer.sh)"  ```
 #
 CURRENTLY IN EARLY TESTING
