@@ -55,7 +55,9 @@ device_type_satisfied=false
 
 until [ "$device_type_satisfied" = true ];
 do
-    PromptDeviceType
+    PromptDeviceType &
+    PromptDeviceType_pid=$!
+    wait $PromptDeviceType_pid
 
     if [[ "$device_type" = "rpi3" || "$device_type" = "rpi4" || "$device_type" = "rpi5" || "$device_type" = "rk3399" || "$device_type" = "rk3588" || "$device_type" = "other"  ]]
     then
@@ -74,7 +76,9 @@ server_type_satisfied=false
 until [ "$server_type_satisfied" = true ];
 do
 
-    PromptServerType
+    PromptServerType &
+    PromptServerType_pid=$!
+    wait $PromotServerType_pid
 
     if [ "$server_type" = "release" ];
     then 
