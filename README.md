@@ -8,6 +8,3 @@ It supports any release/preview version of the server software.
 Run this command: ``` curl https://raw.githubusercontent.com/EditDungeon/RaspiBedrockServer/refs/heads/main/RaspiBedrockServer.sh | bash  ```
 #
 CURRENTLY IN EARLY TESTING
-
-Known Issues:
-- Script spams (fix coming soon)
