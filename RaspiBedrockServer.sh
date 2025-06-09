@@ -62,7 +62,7 @@ do
         device_type_satisfied=true
         Installbox64
     else
-         "Invalid selection, try again."
+         echo "Invalid selection, try again."
         
     fi
 done
