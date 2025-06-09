@@ -56,13 +56,14 @@ device_type_satisfied=false
 until [ "$device_type_satisfied" = true ];
 do
     PromptDeviceType
-    PromptDeviceType_pid=$!
-    wait $PromptDeviceType_pid
 
-    if [[ "$device_type" = "rpi3" || "$device_type" = "rpi4" || "$device_type" = "rpi5" || "$device_type" = "rk3399" || "$device_type" = "rk3588" || "$device_type" = "other"  ]]
+    if [[ "$device_type" =~ ^(rpi3|rpi4|rpi5|rk3399|rk3588|other)$  ]];
     then
         device_type_satisfied=true
         Installbox64
+    else
+         "Invalid selection, try again."
+        
     fi
 done
 
@@ -76,9 +77,7 @@ server_type_satisfied=false
 until [ "$server_type_satisfied" = true ];
 do
 
-    PromptServerType &
-    PromptServerType_pid=$!
-    wait $PromptServerType_pid
+    PromptServerType
 
     if [ "$server_type" = "release" ];
     then 
