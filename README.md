@@ -8,4 +8,5 @@ It supports any release/preview version of the server software.
 Run this command: ``` bash -c "$(curl -fsSL https://raw.githubusercontent.com/EditDungeon/RaspiBedrockServer/main/RaspiBedrockServer.sh)"  ```
 #
 Not working right now
+#
 CURRENTLY IN EARLY TESTING
