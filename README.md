@@ -6,5 +6,5 @@ It supports any release/preview version of the server software.
 
 ## How to Install
 Run this command: ``` bash -c "$(curl -fsSL https://raw.githubusercontent.com/EditDungeon/RaspiBedrockServer/main/RaspiBedrockServer.sh)"  ```
-#
+Not working right now
 CURRENTLY IN EARLY TESTING
